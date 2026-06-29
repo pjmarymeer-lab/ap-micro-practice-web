@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AP Microeconomics Chapter Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">μ</div>
+        <div>
+          <h1>AP Micro Practice</h1>
+          <p>Chapter drills with answers after submit</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div><span id="totalCount">0</span><small>Total</small></div>
+        <div><span id="doneCount">0</span><small>Answered</small></div>
+        <div><span id="scoreCount">-</span><small>Score</small></div>
+      </div>
+      <label class="search-label" for="searchBox">Search</label>
+      <input id="searchBox" class="search" type="search" placeholder="Topic, section, keyword">
+      <nav id="sectionList" class="section-list" aria-label="Sections"></nav>
+    </aside>
+
+    <main class="main">
+      <section class="toolbar">
+        <div>
+          <p class="eyebrow" id="activeSectionLabel">Section</p>
+          <h2 id="activeTitle">Choose a chapter</h2>
+        </div>
+        <div class="actions">
+          <button id="showAllButton" class="ghost" type="button">All Chapters</button>
+          <button id="resetButton" class="ghost" type="button">Reset</button>
+          <button id="submitButton" class="primary" type="button">Submit Practice</button>
+        </div>
+      </section>
+
+      <section id="summaryPanel" class="summary hidden" aria-live="polite"></section>
+      <section id="questionList" class="question-list"></section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
