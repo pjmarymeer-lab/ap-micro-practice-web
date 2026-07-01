@@ -112,6 +112,62 @@ h1 { font-size: 18px; line-height: 1.2; }
 
 .search:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15); }
 
+.mode-panel {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.mode-button {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 11px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 760;
+  text-align: left;
+}
+
+.mode-button:hover { border-color: var(--teal); }
+.mode-button.active { border-color: var(--teal); background: #eef8f6; color: var(--teal-dark); }
+.mode-button.subtle { color: var(--muted); font-weight: 700; }
+.mode-button span {
+  float: right;
+  min-width: 24px;
+  border-radius: 999px;
+  padding: 1px 7px;
+  background: #fff1ed;
+  color: var(--coral);
+  text-align: center;
+}
+
+.mode-heading {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.unit-random-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.unit-random-list .mode-button {
+  min-height: 34px;
+  text-align: center;
+  padding: 0 6px;
+}
+
 .section-list {
   display: grid;
   gap: 7px;
@@ -216,6 +272,48 @@ h2 { margin-top: 4px; font-size: 28px; letter-spacing: 0; }
 
 .summary strong { color: var(--teal-dark); }
 .hidden { display: none; }
+
+.timer-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #f0d7a5;
+  background: #fff8e8;
+  border-radius: 8px;
+  padding: 13px 16px;
+  margin-bottom: 14px;
+}
+
+.timer-panel span {
+  font-variant-numeric: tabular-nums;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--amber);
+}
+
+.timer-panel.urgent {
+  border-color: rgba(194, 65, 50, 0.55);
+  background: #fff0ed;
+}
+
+.timer-panel.urgent span { color: var(--coral); }
+
+.wrong-only {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin: 0 0 16px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--ink);
+  font-weight: 720;
+}
+
+.wrong-only input { accent-color: var(--teal); }
 
 .question-list {
   display: grid;

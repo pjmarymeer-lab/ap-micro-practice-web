@@ -23,6 +23,13 @@
       </div>
       <label class="search-label" for="searchBox">Search</label>
       <input id="searchBox" class="search" type="search" placeholder="Topic, section, keyword">
+      <div class="mode-panel">
+        <button id="wrongReviewButton" class="mode-button" type="button">Wrong Review <span id="wrongCount">0</span></button>
+        <button id="allRandomButton" class="mode-button" type="button">All Random · Timed</button>
+        <div class="mode-heading">Unit Random</div>
+        <div id="unitRandomList" class="unit-random-list"></div>
+        <button id="clearWrongButton" class="mode-button subtle" type="button">Clear Wrong Bank</button>
+      </div>
       <nav id="sectionList" class="section-list" aria-label="Sections"></nav>
     </aside>
 
@@ -39,7 +46,15 @@
         </div>
       </section>
 
+      <section id="timerPanel" class="timer-panel hidden" aria-live="polite">
+        <strong>Timed practice</strong>
+        <span id="timerText">--:--</span>
+      </section>
       <section id="summaryPanel" class="summary hidden" aria-live="polite"></section>
+      <label id="wrongOnlyWrap" class="wrong-only hidden">
+        <input id="wrongOnlyToggle" type="checkbox">
+        <span>Only show wrong answers and explanations</span>
+      </label>
       <section id="questionList" class="question-list"></section>
     </main>
   </div>
